@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "d7e51766-07e0-45b8-85cd-69df068f8f06",
+		"name": "Trial Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Quotation List",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"user_type\":\"dealer\",\"status_id\":\"52\",\"start_index\":0,\"type_id\":\"267\",\"action\":\"orderslist\",\"auth_token\":\"3287641598717661\",\"page_size\":10}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dev.naturalveneers.com/services/nservice_v1.php",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"naturalveneers",
+						"com"
+					],
+					"path": [
+						"services",
+						"nservice_v1.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quotation Details",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"user_type\":\"dealer\",\"status_id\":\"52\",\"start_index\":0,\"type_id\":\"267\",\"action\":\"orderdetail\",\"auth_token\":\"3287641598717661\",\"inquiry_code\":\"INQ00514\",\"page_size\":20}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dev.naturalveneers.com/services/nservice_v1.php",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"naturalveneers",
+						"com"
+					],
+					"path": [
+						"services",
+						"nservice_v1.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Quotation form",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"user_type\":\"dealer\",\"type_id\":\"267\",\"action\":\"get_quotation_form\",\"auth_token\":\"3287641598717661\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dev.naturalveneers.com/services/nservice_v1.php",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"naturalveneers",
+						"com"
+					],
+					"path": [
+						"services",
+						"nservice_v1.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Quotation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"inquiry_id\":\"200\",\"form_data\":[{\"veneers_thickness\":[\"1\"]}],\"action\":\"updatequation\",\"auth_token\":\"3287641598717661\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dev.naturalveneers.com/services/nservice_v1.php",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"naturalveneers",
+						"com"
+					],
+					"path": [
+						"services",
+						"nservice_v1.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Quotation Item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"auth_token\":\"3287641598717661\",\"action\":\"updateorderitem\",\"inquiry_id\":\"2209\",\"data\":[{\"product_size_id\":\"170530\",\"size_id\":\"79\",\"qty\":\"2\",\"sqft_rate\":\"70\"}]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dev.naturalveneers.com/services/nservice_v1.php",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"naturalveneers",
+						"com"
+					],
+					"path": [
+						"services",
+						"nservice_v1.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Quotation Item",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"user_type\":\"dealer\",\"inquiry_id\":\"2209\",\"type_id\":\"267\",\"action\":\"remove_size\",\"auth_token\":\"3287641598717661\",\"product_size_id\":\"179104\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dev.naturalveneers.com/services/nservice_v1.php",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"naturalveneers",
+						"com"
+					],
+					"path": [
+						"services",
+						"nservice_v1.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
